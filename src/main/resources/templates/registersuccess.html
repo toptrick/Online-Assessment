@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Registration Confirmation</title>
+<style>
+body {
+  border:3px dotted green;
+  padding-bottom: 35px;
+  padding-left:35px;
+  margin:10px 20p 30px 40px;
+  background-color:rgb(182, 217, 232);
+}
+</style>
+</head>
+<body>
+<h2>Registered Successfully!!</h2>
+<label th:text="${name}"></label>
+<h3><a th:href="@{/}">LOGIN</a></h3>
+</body>
+</html>

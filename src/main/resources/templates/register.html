@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Registration Page</title>
+<style>
+	#container{
+		background-color:rgb(182, 217, 232);
+		height:768px;
+		width:1400px;
+	}
+	form{
+	margin-left:40%;
+	}
+	h1,h3{
+	text-align:center;
+	}
+	#register{
+	 position: relative;
+  left: 45%;
+  background-color: #f1f1f1;
+  color: black;
+  font-size: 16px;
+  padding:10px 20px;
+  border: 1px dashed black;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+	}
+</style>
+</head>
+<body>
+<div id="container">
+<h1><b>Registration</b></h1>
+<form name="registerform" th:action="@{/register.html}" method="POST">
+<table>
+
+<tr><td>First Name: </td>
+<td><input id="firstname" name="firstname" type="text" pattern="[A-Za-z]{1,}" required></td></tr>
+
+<tr><td>Last Name: </td>
+<td><input id="lastname" name="lastname" type="text" pattern="[A-Za-z]{1,}" required></td></tr>
+
+<tr><td>Email ID: </td>
+<td><input id="email"type="email" name="email" required></td></tr>
+<tr><td>Password: </td>
+
+<td><input id="password" type="password" name="password" pattern=".{8,}" required></td></tr>
+<tr><td><input type="submit" id="register" value="REGISTER"></td></tr>	
+</table>
+</form>
+</div>
+</body>
+</html>
+

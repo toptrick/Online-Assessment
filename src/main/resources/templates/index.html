@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Online Assessment - Home Page</title>
+<style>
+	#container{
+		background-color:rgb(182, 217, 232);
+		height:768px;
+		width:1400px;
+	}
+	form{
+	margin-left:40%;
+	}
+	h1,h3{
+	text-align:center;
+	}
+	#login{
+	 position: relative;
+  left: 45%;
+  background-color: #f1f1f1;
+  color: black;
+  font-size: 16px;
+  padding:10px 20px;
+  border: 1px dashed black;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+	}
+</style>
+</head>
+<body>
+<div id="container">
+<h1><b>Welcome to Devops Assessment</b></h1>
+<h3><b>Login</b></h3><br/>
+<form name="loginform" th:action="@{./}" method="POST">
+<table>
+<tr><td>Email ID: </td>
+<td><input id="email" type="email" name="email" required></td></tr>
+<tr><td>Password: </td>
+<td><input id="password" type="password" name="password" pattern=".{8,}" required></td></tr>
+<tr><td><input type="submit" id="login" value="LOGIN"></td></tr></table>		
+<label>New User ?</label> <a th:href="@{/register.html}">register here</a>
+</form>
+</div>
+</body>
+</html>
+
+
+
+
+

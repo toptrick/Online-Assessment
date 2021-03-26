@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Select Tests</title>
+</head>
+<style>
+body {
+  border:3px dotted green;
+  padding-bottom: 35px;
+  padding-left:35px;
+  margin:10px 20p 30px 40px;
+  background-color:rgb(182, 217, 232);
+}
+#msg{
+text-align:center;
+}
+</style>
+<body>
+<div id="msg">
+Select the Test<br/><br/><br/>
+<a th:href="@{/springAssessment.html}">Spring Assessment</a><br/>
+<a th:href="@{/hibernateAssessment.html}">Hibernate Assessment</a><br/><br/>
+<a th:href="@{/logout}">Logout</a>
+</div>
+</body>
+</html>

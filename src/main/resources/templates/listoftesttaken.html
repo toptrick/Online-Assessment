@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>All Tests Details</title>
+<style>
+table, th, td {
+  border: 1px solid white;
+}
+#container{
+		background-color:rgb(182, 217, 232);
+		height:610px;
+		width:1600px;
+	}
+</style>
+</head>
+<body>
+<div id="container">
+<h1>List of Candidates and Tests</h1><br/>
+<table>
+			<tbody>
+				<tr>
+					<th>Test Date</th>
+					<th>Assessment</th>
+					<th>Test Marks</th>
+					<th>Email ID</th>
+					<th>Total Marks</th>
+					<th>Result</th>
+					</tr>
+					<!--  <tr th:each = "test, iterator: ${tests}">
+			<td><span th:id="'testdate' + ${iterator.count}" th:utext = "${test.date}"></span></td>
+			<td><span th:id="'assessment' + ${iterator.count}" th:utext = "${test.assessment}">></span></td>
+			<td><span th:id="'testmarks' + ${iterator.count}" th:utext = "${test.testmarks}">></span></td>
+			<td><span th:id="'email' + ${iterator.count}" th:utext = "${test.email}">></span></td>
+			<td><span th:id="'totalmarks' + ${iterator.count}" th:utext = "${test.totalmarks}">></span></td>
+			<td><span th:id="'result' + ${iterator.count}" th:utext = "${test.result}">></span></td>
+					</tr>-->
+					<tr th:each = "t : ${test}">
+		<td th:text="${t.TestDate}"></td>
+		<td th:text="${t.Assessment}"></td>
+		<td th:text="${t.TestMarks}"></td>
+		<td th:text="${t.email}"></td>
+		<td th:text="${t.TotalMarks}"></td>
+		<td th:text="${t.result}"></td>
+	</tr>
+					
+					</tbody>
+					</table>
+</div>
+</body>
+</html>
